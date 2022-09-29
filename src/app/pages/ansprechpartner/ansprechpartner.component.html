@@ -3,3 +3,63 @@
         <h1 class="text-3xl font-bold tracking-tight text-gray-900">Ansprechpartner</h1>
     </div>
 </div>
+<main>
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <!-- Sekretariat -->
+        <div class="shadow sm:overflow-hidden sm:rounded-md">
+            <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
+                <div class="container px-5 mx-auto">
+                    <div class="flex flex-col text-center w-full mb-2">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Sekretariatteam</h1>
+                    </div>
+                    <div class="flex flex-wrap -m-2">
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" *ngFor="let sekretariat of sekretariats">
+                            <div class="shadow sm:overflow-hidden sm:rounded-md">
+                                <div class="h-full flex items-center p-4 rounded-lg">
+                                    <img alt="team"
+                                        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                        src="{{ sekretariat.img }}">
+                                    <div class="flex-grow">
+                                        <h2 class="text-gray-900 title-font font-medium">{{ sekretariat.name }}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sekretariat end-->
+        <div class="hidden sm:block" aria-hidden="true">
+            <div class="py-5">
+                <div class="border-t border-gray-200"></div>
+            </div>
+        </div>
+        <!-- Schulleitung -->
+        <div class="shadow sm:overflow-hidden sm:rounded-md">
+            <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
+                <div class="container px-5 mx-auto">
+                    <div class="flex flex-col text-center w-full mb-2">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Schulleitung</h1>
+                    </div>
+                    <div class="flex flex-wrap -m-2">
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" *ngFor="let leader of leaders">
+                            <div class="shadow sm:overflow-hidden sm:rounded-md">
+                                <div class="h-full flex items-center p-4 rounded-lg">
+                                    <img alt="team"
+                                        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                                        src="{{ leader.img }}">
+                                    <div class="flex-grow">
+                                        <h2 class="text-gray-900 title-font font-medium">{{ leader.name }}</h2>
+                                        <p class="text-gray-500">{{ leader.position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Schulleitung end-->
+    </div>
+</main>

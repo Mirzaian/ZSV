@@ -1,6 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './overlay/header/header.component';
@@ -16,6 +17,7 @@ import { AnsprechpartnerComponent } from './pages/ansprechpartner/ansprechpartne
 import { ProfilComponent } from './pages/profil/profil.component';
 import { EinstellungenComponent } from './pages/einstellungen/einstellungen.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FooterComponent } from './overlay/footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { LoginComponent } from './pages/login/login.component';
     AnsprechpartnerComponent,
     ProfilComponent,
     EinstellungenComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { LoginComponent } from './pages/login/login.component';
     MatMenuModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

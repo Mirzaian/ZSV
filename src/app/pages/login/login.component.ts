@@ -12,12 +12,9 @@ export class LoginComponent implements OnInit {
   username!: string;
   password!: string;
 
+  constructor( private router: Router, private userService: UserService, private ngZone: NgZone) {}
 
-  constructor( private router: Router, private userService: UserService, private ngZone: NgZone) {
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   login() {
     if (this.username == "root" && this.password == "123456") {
