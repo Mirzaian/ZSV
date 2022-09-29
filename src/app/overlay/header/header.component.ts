@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { navigationItems } from 'src/app/services/nav-items';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -11,11 +12,15 @@ export class HeaderComponent implements OnInit {
   
   navItems = navigationItems;
 
-  constructor() {
+  constructor(private userService: UserService) {
     console.log(this.navItems = navigationItems);
    }
 
   ngOnInit(): void {
+  }
+
+  logout() {
+    this.userService.logout();
   }
 
 }

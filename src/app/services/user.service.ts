@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
 
-  isLoggedIn$ = new BehaviorSubject(false);
+  isLoggedIn$ = new BehaviorSubject(true);
 
   constructor(private router: Router) {
     this.isLoggedIn$.next(localStorage.getItem('loginStatus') == 'true')
@@ -21,6 +21,6 @@ export class UserService {
   logout() {
     this.isLoggedIn$.next(false)
     localStorage.removeItem('loginStatus')
-    this.router.navigate([''])
+    this.router.navigate(['/anmelden'])
   }
 }
